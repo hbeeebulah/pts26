@@ -17,11 +17,12 @@ export default function Navbar() {
 
   const links = [
     { to: '/', label: 'Home' },
-    { to: '/schedule', label: 'Schedule' },
-    { to: '/speakers', label: 'Speakers' },
-    { to: '/awards', label: 'Awards' },
+    // Temporarily hidden — pages kept in codebase
+    // { to: '/schedule', label: 'Schedule' },
+    // { to: '/speakers', label: 'Speakers' },
+    // { to: '/awards', label: 'Awards' },
     { to: '/registration', label: 'Register' },
-    { to: '/sponsors', label: 'Sponsors' },
+    // { to: '/sponsors', label: 'Sponsors' },
     { to: '/team', label: 'Team' },
   ];
 

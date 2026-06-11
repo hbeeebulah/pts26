@@ -13,10 +13,10 @@ export default function Home() {
             Parent-Teen<br />
             <span className="gradient-text">Summit 2026</span>
           </h1>
-          <p>Bridging the communication and connection gap between parents and their teenage children through immersive sessions, expert-led workshops, and community dialogue.</p>
+          <p> Beyond Grades to Greatness- families inspiring global impact.</p>
           <div className="hero-buttons">
             <Link to="/registration" className="btn btn-primary">Register Now</Link>
-            <Link to="/schedule" className="btn btn-secondary">View Schedule</Link>
+            <Link to="/team" className="btn btn-secondary">Meet The Team</Link>
           </div>
           <div className="hero-stats">
             <div className="hero-stat"><h3>5th</h3><p>Annual Edition</p></div>
@@ -31,11 +31,15 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">About The Summit</h2>
           <div className="divider"></div>
-          <p className="section-subtitle">Now in its fifth year, PTS has become a catalyst for healing, learning, and transforming intergenerational relationships.</p>
+          <p className="section-subtitle">The Parents-Teens Summit is a community programme focused on educating and empowering 
+          parents and adolescents aged 9 to 18.</p>
           <div className="about-grid">
             <div className="about-text">
-              <p>The Parents Teens Summit (PTS) is an annual initiative designed to bridge the communication and connection gap between parents and their teenage children through immersive sessions, expert-led workshops, and community dialogue.</p>
-              <p>Each year, the Summit curates learning experiences that address relevant family dynamics, mental wellness, digital life challenges, emotional regulation, and long-term resilience for parents and Adolescents aged 9–18.</p>
+              <p>Through interactive workshops, strategy sessions, and keynote 
+addresses, the summit aims to enhance communication, build understanding, and foster resilience 
+within families. </p>
+              <p> This year’s five-day event will feature virtual workshops and a hybrid event on the 
+              final day, ensuring broad accessibility and participation.</p>
               <div className="about-features">
                 <div className="about-feature"><div className="icon"><Calendar size={18} /></div><span>5-Day Event</span></div>
                 <div className="about-feature"><div className="icon"><Users size={18} /></div><span>Parent and Teen</span></div>
@@ -45,7 +49,7 @@ export default function Home() {
             </div>
             <div className="about-image-wrapper">
               <div className="about-image-glow"></div>
-              <img src="https://pts25.netlify.app/PTS%20banner.png" alt="PTS Banner" />
+              <img src="/pts26-flyer.png" alt="Parents Teens Summit 2026 Flyer" />
             </div>
           </div>
         </div>

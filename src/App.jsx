@@ -2,11 +2,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Schedule from './pages/Schedule';
-import Speakers from './pages/Speakers';
-import Awards from './pages/Awards';
+// Temporarily hidden — pages kept in codebase
+// import Schedule from './pages/Schedule';
+// import Speakers from './pages/Speakers';
+// import Awards from './pages/Awards';
 import Registration from './pages/Registration';
-import Sponsors from './pages/Sponsors';
+// import Sponsors from './pages/Sponsors';
 import Team from './pages/Team';
 import './App.css';
 
@@ -26,11 +27,12 @@ export default function App() {
         <main style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/speakers" element={<Speakers />} />
-            <Route path="/awards" element={<Awards />} />
+            {/* Temporarily hidden — pages kept in codebase */}
+            {/* <Route path="/schedule" element={<Schedule />} /> */}
+            {/* <Route path="/speakers" element={<Speakers />} /> */}
+            {/* <Route path="/awards" element={<Awards />} /> */}
             <Route path="/registration" element={<Registration />} />
-            <Route path="/sponsors" element={<Sponsors />} />
+            {/* <Route path="/sponsors" element={<Sponsors />} /> */}
             <Route path="/team" element={<Team />} />
           </Routes>
         </main>

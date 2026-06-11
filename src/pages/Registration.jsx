@@ -5,12 +5,12 @@ export default function Registration() {
     {
       title: 'Virtual Teen Attendance', price: 'Free', cls: 'virtual',
       features: ['Live stream of all sessions', '30-day access to recordings', 'Virtual Q&A participation', 'Networking opportunities'],
-      link: 'https://lu.ma/3wqqzva5', btnClass: 'btn btn-primary',
+      link: 'https://luma.com/crqrjaz1', btnClass: 'btn btn-primary',
     },
     {
       title: 'Virtual Parent Attendance', price: 'Free', cls: 'parent',
       features: ['Live stream of all sessions', 'Digital workbook and resources', '30-day access to recordings', 'Virtual Q&A participation'],
-      link: 'https://lu.ma/9yd6nja6', btnClass: 'btn btn-warm',
+      link: 'https://luma.com/4tu2nh1u', btnClass: 'btn btn-warm',
     },
     {
       title: 'On-site Summit/Awards', price: 'Paid', cls: 'onsite',
@@ -23,6 +23,7 @@ export default function Registration() {
     <section className="page-section" style={{ paddingTop: 120 }}>
       <div className="container">
         <h2 className="section-title">Registration</h2>
+        
         <div className="divider"></div>
         <p className="section-subtitle">Select your preferred attendance option below. You will be redirected to our secure registration platform.</p>
         <div className="reg-grid">

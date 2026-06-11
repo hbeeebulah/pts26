@@ -16,8 +16,9 @@ export default function Footer() {
             <h3>Quick Links</h3>
             <div className="footer-links">
               <Link to="/">Home</Link>
-              <Link to="/schedule">Schedule</Link>
-              <Link to="/speakers">Speakers</Link>
+              {/* Temporarily hidden — pages kept in codebase */}
+              {/* <Link to="/schedule">Schedule</Link> */}
+              {/* <Link to="/speakers">Speakers</Link> */}
               <Link to="/registration">Register</Link>
             </div>
           </div>
