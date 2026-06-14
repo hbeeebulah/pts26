@@ -10,16 +10,19 @@ export default function Home() {
         <div className="hero-content">
           <span className="hero-badge">📅 August 24 – 29, 2026 • Lagos, Nigeria</span>
           <h1>
-            Parent-Teen<br />
+            Parents Teens<br />
             <span className="gradient-text">Summit 2026</span>
           </h1>
-          <p> Beyond Grades to Greatness- families inspiring global impact.</p>
+          <h3 className="hero-tagline">
+            Beyond Grades to Greatness<br />
+            <span>Families Inspiring Global Impact</span>
+          </h3>
           <div className="hero-buttons">
             <Link to="/registration" className="btn btn-primary">Register Now</Link>
             <Link to="/team" className="btn btn-secondary">Meet The Team</Link>
           </div>
           <div className="hero-stats">
-            <div className="hero-stat"><h3>5th</h3><p>Annual Edition</p></div>
+            <div className="hero-stat"><h3>6th</h3><p>Annual Edition</p></div>
             <div className="hero-stat"><h3>20+</h3><p>Expert Speakers</p></div>
             <div className="hero-stat"><h3>1000+</h3><p>Attendees Expected</p></div>
           </div>

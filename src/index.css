@@ -15,8 +15,9 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #0a0e1a;
-  color: #e0e6f0;
+  background: linear-gradient(160deg, #2b0a40 0%, #1d0730 40%, #3d2a52 65%, #b58a1b 100%);
+  background-attachment: fixed;
+  color: #f3e9d2;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
