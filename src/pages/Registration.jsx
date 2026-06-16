@@ -15,7 +15,7 @@ export default function Registration() {
     {
       title: 'On-site Summit/Awards', price: 'Paid', cls: 'onsite',
       features: ['Full access to all sessions', 'Lunch and refreshments', 'Physical resource materials', 'Networking opportunities'],
-      link: 'https://www.eventporte.com/event-details/PTS2025', btnClass: 'btn btn-secondary',
+      link: 'https://bitooqoh.com/explore/pts-26', btnClass: 'btn btn-secondary',
     },
   ];
 

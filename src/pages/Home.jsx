@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">About The Summit</h2>
           <div className="divider"></div>
-          <p className="section-subtitle">The Parents-Teens Summit is a community programme focused on educating and empowering 
+          <p className="section-subtitle">The Parents Teens Summit is a community programme focused on educating and empowering 
           parents and adolescents aged 9 to 18.</p>
           <div className="about-grid">
             <div className="about-text">
