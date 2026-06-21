@@ -52,7 +52,7 @@ within families. </p>
             </div>
             <div className="about-image-wrapper">
               <div className="about-image-glow"></div>
-              <img src="/pts26-flyer.png" alt="Parents Teens Summit 2026 Flyer" />
+              <img src="/pts26-flyer.jpeg" alt="Parents Teens Summit 2026 Flyer" />
             </div>
           </div>
         </div>
