@@ -29,18 +29,22 @@ export const physicalSchedule = [
 ];
 
 export const speakers = [
-  { name: "Nuruddeen Lemu", role: "Global Thought Leader, ED IET/DIN", img: "https://pts25.netlify.app/Nurudeen%20Lemu.jpg" },
-  { name: "Wendy Opute", role: "Certified Teen Coach", img: "https://pts25.netlify.app/Wendy%20Opute.jpg" },
-  { name: "Al-Ameen Abolare", role: "Youth Coach", img: "https://pts25.netlify.app/Al-Ameen%20Abolare.jpg" },
-  { name: "Ms Ronke Posh", role: "An Educator and Parent Coach", img: "https://pts25.netlify.app/Ms%20Ronke%20Posh.jpg" },
-  { name: "Zainab Aderounmu", role: "Public Speaking/Communication Expert", img: "https://pts25.netlify.app/Zainab%20Aderounmu.jpg" },
-  { name: "Surrurah Olayinka Ogunfemi", role: "Parent Coach", img: "https://pts25.netlify.app/Surrurah%20Olayinka%20Ogunfemi.jpg" },
-  { name: "Mrs. Modupe Ehirim", role: "Family Life Educator and Therapist", img: "https://pts25.netlify.app/Mrs.%20Modupe%20Ehirim.jpg" },
-  { name: "Abdullah Mumuni", role: "Technical Project Manager", img: "https://pts25.netlify.app/AbduLlah%20Mumini.jpg" },
-  { name: "Juwon Odutayo", role: "Family Life Practitioner/Coach", img: "https://pts25.netlify.app/Juwon%20Odutayo.jpg" },
-  { name: "Ustaz Nurudeen Ibrahim", role: "Founder IRFAN Islamic Center", img: "https://pts25.netlify.app/Ustaz%20Nurudeen%20Ibrahim.jpg" },
-  { name: "Desola Sosan", role: "Certified Family Systems Engineering Practitioner", img: "https://pts25.netlify.app/Desoloa%20shosan.jpg" },
-  { name: "Dr. Hauwa Bello", role: "Psychotherapist, Life Coach, and Clinical Health Psychologist", img: "https://pts25.netlify.app/Dr%20Hauwa%20Bello.jpg" },
+  { name: "Aameenah Yunus-Ali", role: "", img: "/speakers/Aameenah Yunus-Ali.jpeg" },
+  { name: "Abies Sonia", role: "", img: "/speakers/Abies Sonia.png" },
+  { name: "Alhaji Ibrahim Salami", role: "", img: "/speakers/Alhaji Ibrahim Salami.jpeg" },
+  { name: "Coach Mutiat Olasumbo Olagoke", role: "", img: "/speakers/Coach Mutiat Olasumbo Olagoke.jpeg" },
+  { name: "Doyinsola Jawando-Adebomehin", role: "", img: "/speakers/Doyinsola Jawando-Adebomehin.jpeg" },
+  { name: "Dr Mrs Olajobi", role: "", img: "/speakers/Dr Mrs Olajobi.jfif" },
+  { name: "Dr Noimot Abisola Balogun", role: "", img: "/speakers/Dr Noimot Abisola Balogun.jpeg" },
+  { name: "DR. SULAIMON OLAGOKE OGUNMUYIWA", role: "", img: "/speakers/DR. SULAIMON OLAGOKE OGUNMUYIWA.jpeg" },
+  { name: "Joke Haastrup", role: "", img: "/speakers/Joke Haastrup.png" },
+  { name: "Joy Deborah Essien", role: "", img: "/speakers/Joy Deborah Essien.jpeg" },
+  { name: "Latifah Ajetunmob", role: "", img: "/speakers/Latifah Ajetunmob.jpeg" },
+  { name: "Moneeloa Chaane", role: "", img: "/speakers/Moneeloa Chaane.jpeg" },
+  { name: "Muhammed Husseni", role: "", img: "/speakers/Muhammed Husseni.jpeg" },
+  { name: "Nne Oramasionwu", role: "", img: "/speakers/Nne Oramasionwu.jpeg" },
+  { name: "Odunayo Adegbaju", role: "", img: "/speakers/Odunayo Adegbaju.jpg" },
+  { name: "Oludipe Sadat Sade", role: "", img: "/speakers/Oludipe Sadat Sade.jpeg" },
 ];
 
 export const teamMembers = [
