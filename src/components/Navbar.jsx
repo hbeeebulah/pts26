@@ -19,7 +19,7 @@ export default function Navbar() {
     { to: '/', label: 'Home' },
     // Temporarily hidden — pages kept in codebase
     // { to: '/schedule', label: 'Schedule' },
-    // { to: '/speakers', label: 'Speakers' },
+    { to: '/speakers', label: 'Speakers' },
     // { to: '/awards', label: 'Awards' },
     { to: '/registration', label: 'Register' },
     // { to: '/sponsors', label: 'Sponsors' },

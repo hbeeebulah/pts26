@@ -29,32 +29,158 @@ export const physicalSchedule = [
 ];
 
 export const speakers = [
-  { name: "Aameenah Yunus-Ali", role: "", img: "/speakers/Aameenah Yunus-Ali.jpeg" },
-  { name: "Abies Sonia", role: "", img: "/speakers/Abies Sonia.png" },
-  { name: "Alhaji Ibrahim Salami", role: "", img: "/speakers/Alhaji Ibrahim Salami.jpeg" },
-  { name: "Coach Mutiat Olasumbo Olagoke", role: "", img: "/speakers/Coach Mutiat Olasumbo Olagoke.jpeg" },
-  { name: "Doyinsola Jawando-Adebomehin", role: "", img: "/speakers/Doyinsola Jawando-Adebomehin.jpeg" },
-  { name: "Dr Mrs Olajobi", role: "", img: "/speakers/Dr Mrs Olajobi.jfif" },
-  { name: "Dr Noimot Abisola Balogun", role: "", img: "/speakers/Dr Noimot Abisola Balogun.jpeg" },
-  { name: "DR. SULAIMON OLAGOKE OGUNMUYIWA", role: "", img: "/speakers/DR. SULAIMON OLAGOKE OGUNMUYIWA.jpeg" },
-  { name: "Joke Haastrup", role: "", img: "/speakers/Joke Haastrup.png" },
-  { name: "Joy Deborah Essien", role: "", img: "/speakers/Joy Deborah Essien.jpeg" },
-  { name: "Latifah Ajetunmob", role: "", img: "/speakers/Latifah Ajetunmob.jpeg" },
-  { name: "Moneeloa Chaane", role: "", img: "/speakers/Moneeloa Chaane.jpeg" },
-  { name: "Muhammed Husseni", role: "", img: "/speakers/Muhammed Husseni.jpeg" },
-  { name: "Nne Oramasionwu", role: "", img: "/speakers/Nne Oramasionwu.jpeg" },
-  { name: "Odunayo Adegbaju", role: "", img: "/speakers/Odunayo Adegbaju.jpg" },
-  { name: "Oludipe Sadat Sade", role: "", img: "/speakers/Oludipe Sadat Sade.jpeg" },
+  {
+    id: "nne-oramasionwu",
+    name: "Mrs. Nne Oramasionwu",
+    role: "Educational Impact Executive & Cognitive Specialist",
+    title: "Founder & CEO, Brain Ability Place",
+    img: "/speakers/Nne Oramasionwu.jpeg",
+    hasBio: true,
+    bio: "Mrs. Nne Oramasionwu is an educational impact executive, a Board-Certified Cognitive Specialist, and Founder and CEO of Brain Ability Place, Lagos's pioneering cognitive skills training center. With over 19 years of experience, Nne has dedicated her career to transforming how students learn using comprehensive cognitive assessments and personalized, evidence-based brain training to help children and adults strengthen the skills behind learning itself. She's a certified interactive Metronome Provider, offering specialized training to pediatric and adult patients dealing with neurological conditions that impact cognitive, sensory, and motor functioning. She holds an MBA, and brings advanced training in child psychology, autism spectrum disorder, dyslexia, and social impact strategy to her work.",
+    highlights: ["Board-Certified Cognitive Specialist", "Founder & CEO, Brain Ability Place", "19+ Years Educational Experience", "Certified Interactive Metronome Provider", "MBA & Child Psychology Specialist"]
+  },
+  {
+    id: "doyinsola-jawando-adebomehin",
+    name: "Doyinsola Jawando-Adebomehin",
+    role: "Montessori Educator & Behaviour Analyst",
+    title: "Counsellor & NLP Master Practitioner (Mrs Adebomehin - Jawando)",
+    img: "/speakers/Doyinsola Jawando-Adebomehin.jpeg",
+    hasBio: true,
+    bio: "Doyinsola Jawando-Adebomehin is a Montessori educator, Behaviour analyst, Counsellor and an NLP Master Practitioner. Doyinsola, popularly known as justlikethecoconut, is passionate about special needs, mental health and child development. With close to two decades of experience and counting, her name resonates with professionalism in Montessori, special education, and mental health sectors. Doyinsola works with individuals and organizations to dismantle undesired behaviors, install desired behaviors and uphold the wholesome development and mental health of all. Her favorite tasks include carrying out diagnostic and developmental assessments and crafting implementable programs to promote development; for both the typical and atypical.",
+    highlights: ["Montessori Educator", "Behaviour Analyst & Counsellor", "NLP Master Practitioner", "Special Needs & Mental Health Advocate", "Diagnostic & Developmental Specialist"]
+  },
+  {
+    id: "abies-sonia",
+    name: "Abies Sonia Ebenezer-Bamigbayan",
+    role: "Keynote Speaker & Positive Psychology Specialist",
+    title: "Coach Sonia Abies",
+    img: "/speakers/Abies Sonia.png",
+    hasBio: true,
+    bio: "Abies Sonia Ebenezer-Bamigbayan is a multifaceted individual committed to positive transformation. Abies Sonia is a remarkable individual devoted to making a positive impact on lives. With more than ten years of experience in educational environments, she is a committed investor in transforming lives through mentoring, coaching, teaching, counseling, and positive psychology. She holds a Master of Science in Counseling and Positive Psychology, as well as a postgraduate degree in Teaching and Learning from Manchester Metropolitan University. Her educational background and experience has positioned her as a thought leader in her field. As a dynamic keynote speaker, Abies Sonia captivates her audience through her engaging storytelling approach.",
+    highlights: ["Keynote Speaker & Transformational Coach", "M.Sc. Counseling & Positive Psychology", "Postgraduate Degree in Teaching & Learning", "10+ Years Educational Experience", "Youth & Family Mentor"]
+  },
+  {
+    id: "dr-sulaimon-olagoke-ogunmuyiwa",
+    name: "Dr. Sulaimon Olagoke Ogunmuyiwa",
+    role: "Education Administrator & Quality Assurance Expert",
+    title: "Former Director, Office of Education Quality Assurance (Lagos State)",
+    img: "/speakers/DR. SULAIMON OLAGOKE OGUNMUYIWA.jpeg",
+    hasBio: true,
+    bio: "Dr. Sulaimon Olagoke Ogunmuyiwa is a seasoned education administrator, he brings over 25 years of progressive experience in school evaluation, planning, quality assurance systems, and educational leadership within the Lagos State Government. He holds a Ph.D. in Educational Administration and Planning from the University of Abuja, two Master's degrees in Educational Administration and Guidance & Counselling, and a Bachelor's degree in Education from the University of Lagos. Dr. Ogunmuyiwa has served in several strategic roles, including Head of Planning, Head of Education Quality Assurance Services, and most recently Director of Private Education and Special Programmes, in the Office of Education Quality Assurance where he provided oversight for school accreditation, quality monitoring, and systemic improvement initiatives.",
+    highlights: ["25+ Years Educational Leadership", "Ph.D. Educational Administration", "Former Director, OEQA Lagos State", "School Evaluation & Quality Specialist", "Systemic Improvement Advocate"]
+  },
+  {
+    id: "dr-mrs-olajobi",
+    name: "Dr. Mrs. Olajobi",
+    role: "Mind Educationist & Soft Skills Specialist",
+    title: "Creator of Emotional Wellness Kits for Youth",
+    img: "/speakers/Dr Mrs Olajobi.jfif",
+    hasBio: true,
+    bio: "Dr. Mrs. Olajobi has been at the forefront of presenting an unusual form of education for the mind since 2007, equipping young people for life beyond the school setting. She also creates unique avenues for individuals who truly desire to learn how to learn. With a relentless vigour to create a society that is emotionally stable, Dr. Mrs. Olajobi has delivered several keynote presentations, lectures, and hands-on workshops on Soft Skills, Brain Training, Emotional Health, Emotional Wellness/Hygiene, and Emotional First Aid. In her quest to eliminate the vagueness surrounding the teaching of emotional health, she created a series of Emotional Wellness Kits for children and teens, designed to put young people in control of their emotional well-being and empower them to grow into successful adults.",
+    highlights: ["Pioneer Mind Educationist (Since 2007)", "Creator of Emotional Wellness Kits", "Brain Training & Soft Skills Specialist", "Emotional First Aid & Health Advocate", "Youth Empowerment Strategist"]
+  },
+  {
+    id: "aameenah-yunus-ali",
+    name: "Aameenah Yunus-Ali",
+    role: "Family Therapist & Convener",
+    img: "/speakers/Aameenah Yunus-Ali.jpeg",
+    hasBio: false
+  },
+  {
+    id: "alhaji-ibrahim-salami",
+    name: "Alhaji Ibrahim Salami",
+    role: "Community Leader & Speaker",
+    img: "/speakers/Alhaji Ibrahim Salami.jpeg",
+    hasBio: false
+  },
+  {
+    id: "coach-mutiat-olasumbo-olagoke",
+    name: "Coach Mutiat Olasumbo Olagoke",
+    role: "Youth Coach & Speaker",
+    img: "/speakers/Coach Mutiat Olasumbo Olagoke.jpeg",
+    hasBio: false
+  },
+  {
+    id: "dr-noimot-abisola-balogun",
+    name: "Dr. Noimot Abisola Balogun",
+    role: "Health & Wellness Expert",
+    img: "/speakers/Dr Noimot Abisola Balogun.jpeg",
+    hasBio: false
+  },
+  {
+    id: "joke-haastrup",
+    name: "Adejoke Haastrup",
+    role: "Software Engineer & Tech Education Leader",
+    title: "Founder & CEO, Kidsthatcode (Ms. Haastruup)",
+    img: "/speakers/Joke Haastrup.png",
+    hasBio: true,
+    bio: "Adejoke Haastrup is the Founder and CEO of Kidsthatcode, where she's building the next generation of technology creators across Africa. Through coding, AI, mentorship, and project-based learning, she's on a mission to ensure no child is left behind in an increasingly digital world. A software engineer and Developer Relations leader, Adejoke is passionate about making technology education accessible, engaging, and impactful for every child.",
+    highlights: ["Founder & CEO, Kidsthatcode", "Software Engineer & DevRel Leader", "AI & STEM Education Specialist", "Youth Digital Empowerment Advocate"]
+  },
+  {
+    id: "joy-deborah-essien",
+    name: "Joy Deborah Essien",
+    role: "Developmental Psychologist & Certified Adolescent Coach",
+    title: "Deputy President, Young Ecclesia Nation Initiative",
+    img: "/speakers/Joy Deborah Essien.jpeg",
+    hasBio: true,
+    bio: "Joy Deborah Essien is a Developmental Psychologist, Certified Adolescent Coach, Author and full time mum. She is also the Deputy President of Young Ecclesia Nation Initiative, a Christian Youth Ministry. She actively works with Schools parents and other stakeholders in managing behavioral and mental health issues in Teens. She's on a mission to restore wholeness to hearts and minds through the healing blend of theology and therapy. Through her Social media platform, she inspires young people to take charge of their life and emotions. Beyond these, she sees her work as a full time mum as one of the highest calling of her life and believes strongly in raising a generation of children who would not need to heal from any trauma. When she's able to get a little calm, you will catch her either reading or playing hard with her kids.",
+    highlights: ["Developmental Psychologist", "Certified Adolescent Coach & Author", "Deputy President, Young Ecclesia Nation Initiative", "Teens Mental & Emotional Health Advocate"]
+  },
+  {
+    id: "latifah-ajetunmobi",
+    name: "Latifah Ajetunmobi",
+    role: "Registered Nurse & Family Life Coach",
+    title: "Founder, Latifah Ajetunmobi LLC (Latifat Ajet)",
+    img: "/speakers/Latifah Ajetunmob.jpeg",
+    hasBio: true,
+    bio: "Latifah Ajetunmobi is the founder of Latifah Ajetunmobi LLC, a transformative coaching practice specializing in parent, teen, and life coaching. A registered nurse, midwife, and mental health nurse with a nursing science degree from Babcock University, she bridges healthcare expertise and modern family dynamics. She is the author of Beyond the Goat Pen: An African Woman's Journey and The Phone-Free Teenager and has been featured on the Italian television program Conoscere TV. Recognized with the Health 2.0 Outstanding Leadership Award in Las Vegas (2023), Latifah has helped countless families bridge communication gaps, resolve behavioral challenges, and manage screen time while raising African children in the diaspora without losing cultural heritage.",
+    highlights: ["RN, Midwife & Mental Health Specialist", "Author of 'The Phone-Free Teenager'", "Health 2.0 Outstanding Leadership Award (2023)", "Diaspora Family Communication Expert"]
+  },
+  {
+    id: "moneeloa-chaane",
+    name: "Moneeloa Chaane",
+    role: "South African Adolescents & Family Life Coach",
+    title: "Founder, Foundations and Bonds Coaching & Skills Development",
+    img: "/speakers/Moneeloa Chaane.jpeg",
+    hasBio: true,
+    bio: "Moneeloa Chaane is a South African Adolescents and Family Life Coach dedicated to empowering young people and strengthening family relationships. As the Founder of Foundations and Bonds Coaching and Skills Development, she equips adolescents, parents, and families with practical skills to build healthy relationships, navigate life's challenges, and foster personal growth. Through her coaching and skills development programmes, Moneeloa is passionate about helping families create strong foundations, improve communication, and develop resilient, confident young people who are prepared to thrive in an ever-changing world.",
+    highlights: ["Adolescents & Family Life Coach", "Founder, Foundations & Bonds Coaching", "Youth Empowerment Specialist", "Family Communication Strategist"]
+  },
+  {
+    id: "muhammed-husseni",
+    name: "Muhammed Husseni",
+    role: "Youth Mentor & Educator",
+    img: "/speakers/Muhammed Husseni.jpeg",
+    hasBio: false
+  },
+  {
+    id: "odunayo-adegbaju",
+    name: "Odunayo Adegbaju (Super O)",
+    role: "Educator, Coach & Instructional Designer",
+    title: "Lead, Visionary Voices Project",
+    img: "/speakers/Odunayo Adegbaju.jpg",
+    hasBio: true,
+    bio: "Odunayo Adegbaju (Super O) is a passionate educator, coach, and consultant dedicated to transforming lives with global best practices. With 13 years of experience teaching chemistry and certifications from TRCN, IFED, and CAIE, she expertly guides adolescents, young adults, and parents. Skilled in guidance and counselling, coaching, and instructional design, she fosters career development, academic achievement, and essential life skills. Empowering individuals to reach their full potential through personalized guidance and support. Odunayo is a lifelong learner committed to making significant global impact. As a vibrant speaker and facilitator, she prepares learners for the 21st century. She leads Visionary Voices a project centred on celebrating youthful artistry and is a dedicated wife and mother of three.",
+    highlights: ["13 Years Teaching & Educational Leadership", "TRCN, IFED & CAIE Certified", "Lead, Visionary Voices Project", "Instructional Design & Career Coach"]
+  },
+  {
+    id: "oludipe-sadat-sade",
+    name: "Oludipe Sadat Sade",
+    role: "Educational Strategist",
+    img: "/speakers/Oludipe Sadat Sade.jpeg",
+    hasBio: false
+  }
 ];
 
 export const teamMembers = [
-  { name: "Aameenah Oluwatosin Yunus-Ali", role: "Convener", bio: "Aameenah Oluwatosin Yunus-Ali, a Family Therapist, Performance Consultant, Results Coach, and Master NLP Practitioner, specializes in healing childhood trauma and improving family emotional well-being. Founder of Timeless Soul Inc. (TSi), she offers programs like Encounter Me™ and Teen Transition Therapy™.", img: "https://pts25.netlify.app/AY.jpg" },
-  { name: "Folasade Adejoorin", role: "Core Planning Team Lead", bio: "Folasade Adejoorin, an administrator and Associate Family Life Practitioner/Certified Teenagers Coach (IFED), offers valuable insights into family dynamics, adolescent development, and modern parenting.", img: "https://pts25.netlify.app/CF.jpg" },
-  { name: "Hameedah Gbadegeshin", role: "Programme Manager", bio: "Hameedah Gbadegesin is a dynamic administrative and HR professional at Timeless Soul Inc. with a background in customer experience, project coordination, and team performance management.", img: "https://pts25.netlify.app/Hameedah.jpg" },
-  { name: "Habeeb Ajibola", role: "Tech, Logistics & Volunteer Coordination", bio: "Habeeb Ajibola is a passionate Front-End Developer and Community Manager with experience in EdTech, Web3, and e-commerce sectors.", img: "https://pts25.netlify.app/HB.jpg" },
-  { name: "Dr. Taofeekat Salau-Ibrahim", role: "Content and Communications Lead", bio: "Dr. Taofeekat Salau-Ibrahim is a university lecturer, Certified Associate Adolescents Coach, and founder of Empowered Mind Hub — a platform that helps adolescents discover their strengths.", img: "https://pts25.netlify.app/drTaofeekat.png" },
-  { name: "Chineze Nwachukwu", role: "Partnership & Sponsorship Lead", bio: "Chineze Nwachukwu is a certified early years, family life, and adolescents coach dedicated to nurturing the next generation.", img: "https://pts25.netlify.app/nez.jpg" },
-  { name: "Shedrack Ugwu", role: "Content and Communications Lead", bio: "He is a teen coach and mentor passionate about teens personality and behavior management. He has been actively involved in teens leadership development for over two decades.", img: "https://pts25.netlify.app/Shu.jpg" },
+  { name: "Aameenah Oluwatosin Yunus-Ali", role: "Convener", bio: "Aameenah Oluwatosin Yunus-Ali, a Family Therapist, Performance Consultant, Results Coach, and Master NLP Practitioner, specializes in healing childhood trauma and improving family emotional well-being. Founder of Timeless Soul Inc. (TSi), she offers programs like Encounter Me™ and Teen Transition Therapy™.", img: "/team/AY.jpg" },
+  { name: "Folasade Adejoorin", role: "Core Planning Team Lead", bio: "Folasade Adejoorin, an administrator and Associate Family Life Practitioner/Certified Teenagers Coach (IFED), offers valuable insights into family dynamics, adolescent development, and modern parenting.", img: "/team/CF.jpg" },
+  { name: "Hameedah Gbadegeshin", role: "Programme Manager", bio: "Hameedah Gbadegesin is a dynamic administrative and HR professional at Timeless Soul Inc. with a background in customer experience, project coordination, and team performance management.", img: "/team/Hameedah.jpg" },
+  { name: "Habeeb Ajibola", role: "Tech, Logistics & Volunteer Coordination", bio: "Habeeb Ajibola is a passionate Front-End Developer and Community Manager with experience in EdTech, Web3, and e-commerce sectors.", img: "/team/HB.jpg" },
+  { name: "Dr. Taofeekat Salau-Ibrahim", role: "Content and Communications Lead", bio: "Dr. Taofeekat Salau-Ibrahim is a university lecturer, Certified Associate Adolescents Coach, and founder of Empowered Mind Hub — a platform that helps adolescents discover their strengths.", img: "/team/drTaofeekat.png" },
+  { name: "Chineze Nwachukwu", role: "Partnership & Sponsorship Lead", bio: "Chineze Nwachukwu is a certified early years, family life, and adolescents coach dedicated to nurturing the next generation.", img: "/team/nez.jpg" },
+  { name: "Shedrack Ugwu", role: "Content and Communications Lead", bio: "He is a teen coach and mentor passionate about teens personality and behavior management. He has been actively involved in teens leadership development for over two decades.", img: "/team/Shu.jpg" },
 ];
 
 export const sponsors = [
