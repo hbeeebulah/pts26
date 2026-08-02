@@ -89,16 +89,22 @@ export const speakers = [
   {
     id: "alhaji-ibrahim-salami",
     name: "Alhaji Ibrahim Salami",
-    role: "Community Leader & Speaker",
+    role: "Product Designer, Tech Founder & Public Policy Fellow",
+    title: "Founder of Haut Institute of Technology & Former SA to Lagos State Governor",
     img: "/speakers/Alhaji Ibrahim Salami.jpeg",
-    hasBio: false
+    hasBio: true,
+    bio: "Alhaji Ibrahim Salami is a graduate of Civil and Environmental Engineering from the University of Lagos and an MBA candidate at the University of East London. He has also completed executive education at the Lee Kuan Yew School of Public Policy, Singapore, and Lagos Business School. A fellow of the Lateef Jakande Leadership Academy, Ibrahim has served as Special Assistant to the Governor of Lagos State across the Ministries of Tourism, Innovation & Technology, and the Lagos State Parking Authority. As a product designer, he is leading design at Human Development Fund, Michigan USA. He has led design at companies such as Humongous.io (California), Payvantage, Halcredit, Stecs, and Learnswift. He is the Founder of Haut Institute of Technology, Co-Founder of Barnaamaj, and Founder of Bitooqoh, an event management platform.",
+    highlights: ["Product Designer & Tech Entrepreneur", "Lateef Jakande Leadership Fellow", "Former SA to Lagos State Governor", "Founder, Haut Institute of Technology & Bitooqoh"]
   },
   {
     id: "coach-mutiat-olasumbo-olagoke",
     name: "Coach Mutiat Olasumbo Olagoke",
-    role: "Youth Coach & Speaker",
+    role: "Social Entrepreneur, Business & Behavioural Management Coach",
+    title: "Founder & CEO, Egret Media Limited | Convener, Muslimah Speaks Tribe",
     img: "/speakers/Coach Mutiat Olasumbo Olagoke.jpeg",
-    hasBio: false
+    hasBio: true,
+    bio: "Coach Mutiat Olasumbo Olagoke (Fpmc, CBCM, FIPMA) is an award-winning social entrepreneur, certified business coach, communication expert, behavioural management and soft skills coach, publisher, author, and public speaker with over 17 years of experience empowering entrepreneurs, children and purpose-driven individuals to grow with confidence and excellence. She is the Founder and CEO of Egret Media Limited and the Convener of Muslimah Speaks Tribe, where she equips women with practical tools for business growth, leadership, communication, and personal development. Through coaching, training, and mentorship, she has impacted thousands of lives across Nigeria and beyond. Fondly known as \"The Queen of Awesomeness,\" Mutiat is passionate about helping people discover their potential.",
+    highlights: ["17+ Years Coaching & Empowerment", "Fpmc, CBCM, FIPMA Certified", "CEO, Egret Media Limited", "Convener, Muslimah Speaks Tribe", "Fondly known as 'The Queen of Awesomeness'"]
   },
   {
     id: "dr-noimot-abisola-balogun",
@@ -166,10 +172,23 @@ export const speakers = [
   },
   {
     id: "oludipe-sadat-sade",
-    name: "Oludipe Sadat Sade",
-    role: "Educational Strategist",
+    name: "(Mrs) Oludipe Sadat Sade",
+    role: "I.C.T. Educator & Educational Psychologist",
+    title: "I.C.T. Teacher & EMIS Officer, Baptist Senior High School Obanikoro (Sade Oludipe)",
     img: "/speakers/Oludipe Sadat Sade.jpeg",
-    hasBio: false
+    hasBio: true,
+    bio: "(Mrs) Oludipe Sadat Sade is an I.C.T. teacher at Baptist Senior High School Obanikoro and the school's EMIS (Education Management Information System) Officer. She holds a Bachelor's degree in Computer Science Education and a Master's degree in Educational Psychology a combination that gives her rare insight into both technology and how young people think, learn, and grow. She's also a wife and mother of three, 2 of which are teenagers. She brings a parent's heart and an educator's expertise to conversations about raising teens in a digital age. She is passionate about helping parents and teens navigate technology, communication, and adolescent development together.",
+    highlights: ["B.Sc Computer Science Edu & M.Sc Educational Psychology", "EMIS Officer & I.C.T. Educator", "Digital Parenting & Adolescent Development Specialist", "Tech & Teen Behavior Advocate"]
+  },
+  {
+    id: "zainab-aderounmu",
+    name: "Zainab Aderounmu A. W.",
+    role: "Communications Expert, Corporate MC & Broadcast Journalist",
+    title: "EU Youth Advisor, Ambassador & Head of Communications (EU Youth Sounding Board)",
+    img: "/speakers/Zainab Aderounmu.jpg",
+    hasBio: true,
+    bio: "Zainab ADEROUNMU A. W. is a Communications Expert, Corporate Master of Ceremonies, and Broadcast Journalist. She has a background in English Language and Literature with a First Class grade, finishing as the overall Best Graduating Student. As a gender and climate advocate, she believes women's economic empowerment translates into global economic growth. So she works at the intersection of gender equality and climate change. She works with the European Union Delegation as a Youth Advisor and Ambassador, specifically as the Spokesperson and Head of Communications and PR for the European Union Youth Sounding Board.",
+    highlights: ["Communications Expert & Corporate MC", "Broadcast Journalist", "EU Youth Advisor & Ambassador", "Spokesperson & Head of Comms, EU Youth Sounding Board", "First Class Overall Best Graduating Student"]
   }
 ];
 
