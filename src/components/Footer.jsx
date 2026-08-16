@@ -17,8 +17,8 @@ export default function Footer() {
             <div className="footer-links">
               <Link to="/">Home</Link>
               {/* Temporarily hidden — pages kept in codebase */}
-              {/* <Link to="/schedule">Schedule</Link> */}
               <Link to="/speakers">Speakers</Link>
+              <Link to="/sponsors">Sponsors & Partners</Link>
               <Link to="/registration">Register</Link>
             </div>
           </div>

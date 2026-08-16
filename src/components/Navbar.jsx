@@ -21,7 +21,7 @@ export default function Navbar() {
     { to: '/speakers', label: 'Speakers' },
     // { to: '/awards', label: 'Awards' },
     { to: '/registration', label: 'Register' },
-    // { to: '/sponsors', label: 'Sponsors' },
+    { to: '/sponsors', label: 'Sponsors & Partners' },
     { to: '/team', label: 'Team' },
   ];
 

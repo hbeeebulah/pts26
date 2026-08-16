@@ -202,31 +202,285 @@ export const teamMembers = [
   { name: "Shedrack Ugwu", role: "Content and Communications Lead", bio: "He is a teen coach and mentor passionate about teens personality and behavior management. He has been actively involved in teens leadership development for over two decades.", img: "/team/Shu.jpg" },
 ];
 
+export const partners = [
+  {
+    id: "bintu-bidmus",
+    name: "Bintu Bidmus Concept",
+    subtitle: "Event Planner & Event Decorator",
+    category: "Event Planning & Styling",
+    logo: "/partners/bintu-bidmus.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@bintubidmusconcept",
+    description: "Specializing in luxury event planning, styling, and decor concepts for corporate and private events."
+  },
+  {
+    id: "brain-ability-place",
+    name: "Brain Ability Place",
+    subtitle: "Cognitive Skills Center",
+    category: "Cognitive Development & Learning",
+    logo: "/partners/brain-ability-place.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@brainabilityplace",
+    description: "Pioneering cognitive assessment and brain training center empowering kids and adults to excel."
+  },
+  {
+    id: "con-care-solutions",
+    name: "Con-Care Solutions Management Services",
+    subtitle: "Facility & Care Management",
+    category: "Management & Facility Services",
+    logo: "/partners/con-care.png",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@concaresolutions",
+    description: "Professional management services, facility maintenance, and environmental care solutions."
+  },
+  {
+    id: "crest-prints",
+    name: "Crest Prints",
+    subtitle: "i Design • i Print • i Brand",
+    category: "Design, Print & Branding",
+    logo: "/partners/crest-prints.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@crestprints",
+    description: "Premier printing powerhouse providing creative design, brand identity, and commercial printing."
+  },
+  {
+    id: "d-oak-practice",
+    name: "D-OAK Practice Limited",
+    subtitle: "Therapy • Support • Growth",
+    category: "Family Therapy & Educational Support",
+    logo: "/partners/d-oak-practice.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@doakpractice",
+    description: "Providing comprehensive therapy, family support, mental wellness, and educational guidance."
+  },
+  {
+    id: "zinulo",
+    name: "Zinulo",
+    subtitle: "Building Families...",
+    category: "Family Development & Support",
+    logo: "/partners/zinulo.jpg",
+    logoBg: "#0a192f",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@zinulo",
+    description: "Dedicated to building and empowering strong families through visionary consulting, family support, and community development."
+  },
+  {
+    id: "fam-360",
+    name: "Fam 360",
+    subtitle: "Family Life Consult",
+    category: "Family Life Consultancy",
+    logo: "/partners/fam-360.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@fam360consult",
+    description: "Supporting every dimension of family life with expert consultancy, relational support, and life coaching."
+  },
+  {
+    id: "family-house-africa",
+    name: "Family House Africa",
+    subtitle: "Empowering African Families",
+    category: "Family Advocacy & Empowerment",
+    logo: "/partners/family-house-africa.png",
+    logoBg: "#0f172a",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@familyhouseafrica",
+    description: "Pioneering family growth initiatives, advocacy, and educational frameworks across the African continent."
+  },
+  {
+    id: "egret-media",
+    name: "Egret Media",
+    subtitle: "Media & Brand Communications",
+    category: "Media & Visual Content",
+    logo: "/partners/egret-media.png",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@egretmedia",
+    description: "Creative media production house delivering storytelling, digital media solutions, and brand communications."
+  },
+  {
+    id: "family-flourish-network",
+    name: "Family Flourish Network",
+    subtitle: "Nurture • Empower • Flourish",
+    category: "Family Wellness Network",
+    logo: "/partners/family-flourish-network.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@familyflourishnetwork",
+    description: "Creating vibrant networks and support systems designed to nurture, empower, and help every family flourish."
+  },
+  {
+    id: "first-protocol-foods",
+    name: "First Protocol Foods",
+    subtitle: "Catering & Culinary Services",
+    category: "Catering & Culinary Services",
+    logo: "/partners/first-protocol-foods.jpg",
+    logoBg: "#000000",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@firstprotocolfoods",
+    description: "Providing premium culinary services, event catering, and gourmet dining experiences for major corporate and family events."
+  },
+  {
+    id: "goxi-microinsurance",
+    name: "GOXI Microinsurance",
+    subtitle: "Financial Security & Microinsurance",
+    category: "Financial Services & Protection",
+    logo: "/partners/goxi-microinsurance.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@goximicroinsurance",
+    description: "Delivering accessible microinsurance and financial security solutions tailored to empower low-income families and micro-entrepreneurs."
+  },
+  {
+    id: "guided-path-school",
+    name: "Guided Path School (GPS)",
+    subtitle: "Equipping Minds with Beneficial Knowledge",
+    category: "Educational Institution",
+    logo: "/partners/guided-path-school.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@guidedpathschool",
+    description: "A leading educational institution committed to holistic academic excellence, character building, and nurturing young leaders."
+  },
+  {
+    id: "network-of-family-life-professionals",
+    name: "Network of Family Life Professionals",
+    subtitle: "Connecting & Empowering Family Practitioners",
+    category: "Professional Network & Advocacy",
+    logo: "/partners/network-of-family-life-professionals.png",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@nflp_ng",
+    description: "A premier alliance of family life practitioners, coaches, and counselors collaborating to strengthen families across communities."
+  },
+  {
+    id: "kids-that-code",
+    name: "Kids That Code (KTC)",
+    subtitle: "Empowering Tech Leaders of Tomorrow",
+    category: "STEM & Tech Education",
+    logo: "/partners/kids-that-code.jpg",
+    logoBg: "#000000",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@kidsthatcodeng",
+    description: "Inspiring and training young minds in coding, robotics, and digital innovation to equip them for the tech-driven future."
+  },
+  {
+    id: "latifah-ajetunmobi",
+    name: "Latifah Ajetunmobi",
+    subtitle: "Connect • Understand • Thrive",
+    category: "Family Life Coaching & Mentorship",
+    logo: "/partners/latifah-ajetunmobi.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@latifahajetunmobi",
+    description: "Dedicated family coach helping families connect deeply, understand relational dynamics, and thrive together."
+  },
+  {
+    id: "mpac",
+    name: "MPAC (Muslim Public Affairs Centre)",
+    subtitle: "Public Affairs & Civic Engagement",
+    category: "Civic Advocacy & Public Affairs",
+    logo: "/partners/mpac.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@mpac_ng",
+    description: "An independent, non-partisan public affairs organization promoting civil rights, civic empowerment, and interfaith engagement."
+  },
+  {
+    id: "mind-aviv",
+    name: "Mind Aviv",
+    subtitle: "Mental Health & Psychological Wellness",
+    category: "Mental Health & Wellness",
+    logo: "/partners/mind-aviv.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@mindaviv",
+    description: "Providing compassionate mental health support, emotional wellness guidance, and psychological services for youth and families."
+  },
+  {
+    id: "muslim-girls-talk",
+    name: "Muslim Girls' Talk",
+    subtitle: "Nurturing Faith, Inspiring Excellence",
+    category: "Youth Empowerment & Mentorship",
+    logo: "/partners/muslim-girls-talk.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@muslimgirlstalk",
+    description: "A mentorship initiative nurturing faith, confidence, and personal excellence among young girls and teenagers."
+  },
+  {
+    id: "m-solutions",
+    name: "M-Solutions Consulting International",
+    subtitle: "Strategic Consulting & Development",
+    category: "Management & Strategic Consulting",
+    logo: "/partners/m-solutions.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@msolutionsconsulting",
+    description: "International strategic consultancy firm offering organizational development, training, and management advisory."
+  },
+  {
+    id: "potential-learning-place",
+    name: "Potential Learning Place Limited",
+    subtitle: "Unlocking Academic & Growth Potential",
+    category: "Educational Support & Learning",
+    logo: "/partners/potential-learning-place.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@potentiallearningplace",
+    description: "Dedicated to unlocking every student's potential through personalized learning support, tutoring, and educational development."
+  },
+  {
+    id: "querus-consults",
+    name: "Querus Consults",
+    subtitle: "Excellence in Strategic Advisory",
+    category: "Business & Management Consulting",
+    logo: "/partners/querus-consults.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@querusconsults",
+    description: "Providing high-impact strategic advisory, corporate consulting, and professional growth solutions."
+  },
+  {
+    id: "nez-royale-foods",
+    name: "Nez Royalé Foods",
+    subtitle: "Confectionary, Food & Beverages • Signature for Quality",
+    category: "Food, Confectionary & Beverages",
+    logo: "/partners/nez-royale-foods.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@nezroyale",
+    description: "Crafting premium confectionary, delicious food products, and refreshing beverages committed to exceptional quality."
+  },
+  {
+    id: "the-neurobide",
+    name: "The Neurobide",
+    subtitle: "Brain Health & Cognitive Excellence",
+    category: "Cognitive Health & Neuroscience",
+    logo: "/partners/the-neurobide.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@theneurobide",
+    description: "Specializing in brain wellness, cognitive development, neuro-diversity coaching, and mental performance."
+  },
+  {
+    id: "re-ignite",
+    name: "RE-IGNITE",
+    subtitle: "Ctrl Alt Restore Your Life",
+    category: "Life Restoration & Personal Growth",
+    logo: "/partners/re-ignite.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@reignite_life",
+    description: "Empowering individuals and families to reset, restore emotional balance, and reignite purpose and vitality."
+  },
+  {
+    id: "teeliz",
+    name: "TEELIZ",
+    subtitle: "Innovation & Strategic Solutions",
+    category: "Corporate & Technology Solutions",
+    logo: "/partners/teeliz.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@teeliz_",
+    description: "Providing strategic advisory, technology integration, and modern solution architecture for growing organizations."
+  },
+  {
+    id: "tbma-blissful-marriage-academy",
+    name: "TBMA (The Blissful Marriage Academy)",
+    subtitle: "Nurturing Happy, Resilient & Lasting Marriages",
+    category: "Marital Coaching & Relationship Support",
+    logo: "/partners/tbma-blissful-marriage-academy.jpg",
+    instagramUrl: "https://instagram.com/",
+    instagramHandle: "@tbma_marriage",
+    description: "Dedicated to equipping couples with proven principles, pre-marital counseling, and relational skills for enduring marriages."
+  }
+];
+
 export const sponsors = [
-  { name: "Rite Foods", logo: "https://pts25.netlify.app/Rite%20Foods.png" },
-  { name: "GOXI", logo: "https://pts25.netlify.app/GOXI%20(1).jpg" },
-  { name: "Yoosrah Kitchen", logo: "https://pts25.netlify.app/Yoosrah%20logo.jpg" },
-  { name: "iNurture", logo: "https://pts25.netlify.app/iNurture.png" },
-  { name: "Lateefah Modupeola Okunnu Foundation", logo: "https://pts25.netlify.app/LMOF.jpeg" },
-  { name: "ASEB Consulting", logo: "https://pts25.netlify.app/ASEB%20Consulting.jpg" },
-  { name: "Ronke Posh on the Mic", logo: "https://pts25.netlify.app/Ronke%20Posh.jpg" },
-  { name: "Kidsthatcode NG", logo: "https://pts25.netlify.app/ktc%20laptop%20smiley.png" },
-  { name: "Better Days Teens Academy", logo: "https://pts25.netlify.app/BETTER%20DAYS%20TEENS%20ACADEMY.jpg" },
-  { name: "United For Kids Foundation", logo: "https://pts25.netlify.app/UKF%20Logo.png" },
-  { name: "BlackMoh", logo: "https://pts25.netlify.app/BlackMoh.jpeg" },
-  { name: "Empowered Mind Hub", logo: "https://pts25.netlify.app/Empowered%20Mind%20Hub.png" },
-  { name: "Family Flourish", logo: "https://pts25.netlify.app/Family%20Flourish%20.png" },
-  { name: "Guide Tribe", logo: "https://pts25.netlify.app/Guide%20Tribe.jpg" },
-  { name: "Guided Beginnings", logo: "https://pts25.netlify.app/Guided%20beginnings.png" },
-  { name: "Life Affairs", logo: "https://pts25.netlify.app/LIFE%20AFFAIRS.jpg" },
-  { name: "Mind Aviv", logo: "https://pts25.netlify.app/Mind%20aviv.jpg" },
-  { name: "MO Market and More", logo: "https://pts25.netlify.app/MO%20Market%20and%20more.jpg" },
-  { name: "Network of Family Life Professionals", logo: "https://pts25.netlify.app/Network%20of%20Family%20Life%20Professionals.jpg" },
-  { name: "Nez Royalè Foods", logo: "https://pts25.netlify.app/Nez%20Royal%C3%A8%20Foods.jpg" },
-  { name: "Parent First", logo: "https://pts25.netlify.app/Parent%20First.jpg" },
-  { name: "Potential Learning Place Limited", logo: "https://pts25.netlify.app/POTENTIAL%20LEARNING%20PLACE%20LIMITED%20.jpg" },
-  { name: "The Daisy Place UK", logo: "https://pts25.netlify.app/The%20Daisy%20PLACE%20UK.jpg" },
-  { name: "IRFAN Centre", logo: "https://pts25.netlify.app/IRFAN%20CENTRE.jpg" },
+  { name: "Sosa Fruit Drink", logo: "/partners/sosa-fruit-drink.png" }
 ];
 
 export const awardCategories = {

@@ -8,7 +8,7 @@ import Speakers from './pages/Speakers';
 import SpeakerBio from './pages/SpeakerBio';
 // import Awards from './pages/Awards';
 import Registration from './pages/Registration';
-// import Sponsors from './pages/Sponsors';
+import Sponsors from './pages/Sponsors';
 import Team from './pages/Team';
 import './App.css';
 
@@ -34,7 +34,7 @@ export default function App() {
             <Route path="/speakers/:id" element={<SpeakerBio />} />
             {/* <Route path="/awards" element={<Awards />} /> */}
             <Route path="/registration" element={<Registration />} />
-            {/* <Route path="/sponsors" element={<Sponsors />} /> */}
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/team" element={<Team />} />
           </Routes>
         </main>
