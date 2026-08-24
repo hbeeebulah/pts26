@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Calendar, User, LayoutGrid, ListFilter, Sparkles, ExternalLink, Info, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Calendar, User, LayoutGrid, ListFilter, Sparkles, ExternalLink, Info, CheckCircle2, ArrowRight, Play, VideoOff } from 'lucide-react';
 import { 
   virtualParentMatrix, 
   virtualTeenMatrix, 
   virtualTeenSchedule, 
   virtualParentSchedule, 
   physicalSchedule, 
-  speakers 
+  speakers,
+  isSessionPast
 } from '../data/content';
 
 export default function Schedule() {
@@ -26,6 +27,40 @@ export default function Schedule() {
     if (!speakerId) return;
     e.stopPropagation();
     navigate(`/speakers/${speakerId}`);
+  };
+
+  // Helper component to render the Rewatch button / indicator
+  const renderRewatchButton = (dateStr, timeStr, youtubeUrl, explicitPast, isTimeline = false) => {
+    const isPast = isSessionPast(dateStr, timeStr, explicitPast);
+    
+    // If the day hasn't passed and no explicit video link is added, show nothing
+    if (!isPast && (!youtubeUrl || youtubeUrl.trim() === '')) {
+      return null;
+    }
+
+    if (youtubeUrl && youtubeUrl.trim() !== '') {
+      return (
+        <a
+          href={youtubeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`rewatch-btn available ${isTimeline ? 'timeline' : ''}`}
+          title="Rewatch session video on YouTube"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Play size={isTimeline ? 14 : 12} fill="currentColor" /> Rewatch Session
+        </a>
+      );
+    }
+
+    return (
+      <span 
+        className={`rewatch-btn unavailable ${isTimeline ? 'timeline' : ''}`} 
+        title="Session recording is not yet available"
+      >
+        <VideoOff size={isTimeline ? 13 : 11} /> Not Yet Available
+      </span>
+    );
   };
 
   return (
@@ -134,6 +169,7 @@ export default function Schedule() {
                             {row.cells.map((cell, cIdx) => {
                               const speakerData = getSpeaker(cell.speakerId);
                               const displayName = speakerData ? speakerData.name : cell.speaker;
+                              const sessionDate = cell.date || virtualParentMatrix.days[cIdx]?.date;
                               
                               return (
                                 <td 
@@ -170,6 +206,9 @@ export default function Schedule() {
                                         ⏰ {cell.time}
                                       </div>
                                     )}
+
+                                    {/* Rewatch Session Button / Status */}
+                                    {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                   </div>
                                 </td>
                               );
@@ -219,6 +258,8 @@ export default function Schedule() {
                             </td>
 
                             {row.cells.map((cell, cIdx) => {
+                              const sessionDate = cell.date || virtualTeenMatrix.days[cIdx]?.date;
+
                               // If cell contains multiple speakers (e.g. Zahra Ajet/Zainab Aderohunmu)
                               if (cell.speakers) {
                                 return (
@@ -256,6 +297,9 @@ export default function Schedule() {
                                           ⏰ {cell.time}
                                         </div>
                                       )}
+
+                                      {/* Rewatch Session Button / Status */}
+                                      {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                     </div>
                                   </td>
                                 );
@@ -301,6 +345,9 @@ export default function Schedule() {
                                         ⏰ {cell.time}
                                       </div>
                                     )}
+
+                                    {/* Rewatch Session Button / Status */}
+                                    {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                   </div>
                                 </td>
                               );
@@ -370,6 +417,8 @@ export default function Schedule() {
                     <div className="schedule-meta">
                       <div className="schedule-date">📅 {item.date}</div>
                       <div className="schedule-time">⏰ {item.time}</div>
+                      {/* Rewatch Session Button / Status */}
+                      {renderRewatchButton(item.date, item.time, item.youtubeUrl, item.isPast, true)}
                     </div>
                   </div>
                 );
@@ -402,6 +451,8 @@ export default function Schedule() {
                     <div className="schedule-meta">
                       <div className="schedule-date">📅 {item.date}</div>
                       <div className="schedule-time">⏰ {item.time}</div>
+                      {/* Rewatch Session Button / Status */}
+                      {renderRewatchButton(item.date, item.time, item.youtubeUrl, item.isPast, true)}
                     </div>
                   </div>
                 );

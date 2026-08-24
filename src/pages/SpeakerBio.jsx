@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Award, CheckCircle, Sparkles, UserCheck } from 'lucide-react';
-import { speakers as speakersData, virtualTeenSchedule, virtualParentSchedule, physicalSchedule } from '../data/content';
+import { ArrowLeft, Calendar, Award, CheckCircle, Sparkles, UserCheck, Play, VideoOff } from 'lucide-react';
+import { speakers as speakersData, virtualTeenSchedule, virtualParentSchedule, physicalSchedule, isSessionPast } from '../data/content';
 
 export default function SpeakerBio() {
   const { id } = useParams();
@@ -111,15 +111,36 @@ export default function SpeakerBio() {
               <div className="bio-sessions-block">
                 <h3><Calendar size={18} /> Sessions Facilitated by {speaker.name}</h3>
                 <div className="bio-sessions-grid">
-                  {speakerSessions.map((session, sIdx) => (
-                    <div className="bio-session-card" key={sIdx}>
-                      <div className="session-topic">{session.topic}</div>
-                      <div className="session-time-meta">
-                        <span>📅 {session.date}</span>
-                        <span>⏰ {session.time}</span>
+                  {speakerSessions.map((session, sIdx) => {
+                    const isPast = isSessionPast(session.date, session.time, session.isPast);
+                    return (
+                      <div className="bio-session-card" key={sIdx}>
+                        <div className="session-topic">{session.topic}</div>
+                        <div className="session-time-meta">
+                          <span>📅 {session.date}</span>
+                          <span>⏰ {session.time}</span>
+                        </div>
+                        {(isPast || session.youtubeUrl) && (
+                          <div style={{ marginTop: 10 }}>
+                            {session.youtubeUrl ? (
+                              <a
+                                href={session.youtubeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rewatch-btn available timeline"
+                              >
+                                <Play size={13} fill="currentColor" /> Rewatch Session
+                              </a>
+                            ) : (
+                              <span className="rewatch-btn unavailable timeline">
+                                <VideoOff size={12} /> Not Yet Available
+                              </span>
+                            )}
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

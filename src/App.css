@@ -1304,6 +1304,66 @@
   font-size: 0.9rem;
 }
 
+/* ===== REWATCH SESSION BUTTON STYLES ===== */
+.rewatch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all var(--transition);
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+}
+
+.rewatch-btn.timeline {
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  margin-top: 10px;
+}
+
+/* Available state - Red YouTube Theme / Premium Gradient */
+.rewatch-btn.available {
+  background: linear-gradient(135deg, #ff0033 0%, #cc0000 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(255, 0, 51, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rewatch-btn.available:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(135deg, #ff1a47 0%, #e60000 100%);
+  box-shadow: 0 6px 20px rgba(255, 0, 51, 0.6);
+  color: #ffffff;
+}
+
+.rewatch-btn.available:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Unavailable state - Disabled Glass / Muted Badge */
+.rewatch-btn.unavailable {
+  background: rgba(255, 255, 255, 0.06);
+  color: #c7b8d6;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.85;
+}
+
+.rewatch-btn.unavailable:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--text-primary);
+}
+
 .schedule-note-card {
   max-width: 680px;
   margin: 48px auto 0;

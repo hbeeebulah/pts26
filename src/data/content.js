@@ -1,22 +1,57 @@
+// Helper function to check if a session date has passed
+export const isSessionPast = (dateStr, timeStr, explicitPast) => {
+  if (typeof explicitPast === 'boolean') return explicitPast;
+  if (!dateStr) return false;
+
+  // Clean ordinal suffixes: "24th August 2026" -> "24 August 2026"
+  const cleanDateStr = dateStr.replace(/(\d+)(st|nd|rd|th)/i, '$1');
+  const sessionDate = new Date(cleanDateStr);
+  if (isNaN(sessionDate.getTime())) return false;
+
+  const now = new Date();
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const sessionStart = new Date(sessionDate.getFullYear(), sessionDate.getMonth(), sessionDate.getDate());
+
+  if (todayStart > sessionStart) {
+    return true; // The date is strictly in the past
+  }
+
+  if (todayStart.getTime() === sessionStart.getTime()) {
+    // If it's today, check if session end time has passed
+    if (timeStr && timeStr.includes('-')) {
+      const parts = timeStr.split('-');
+      const endTimeStr = parts[1].trim(); // e.g. "5:30 PM" or "9:30 PM"
+      const parsedEnd = new Date(`${cleanDateStr} ${endTimeStr}`);
+      if (!isNaN(parsedEnd.getTime())) {
+        return now >= parsedEnd;
+      }
+    }
+    // Default to true for today once summit date has arrived
+    return true;
+  }
+
+  return false;
+};
+
 export const virtualTeenSchedule = [
-  { topic: "Made for More: Discovering the Gifts That Make Me Unique (AGE 9-14)", facilitator: "Moneeloa Chaane", date: "24th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Designing a Life of Significance: Purpose, Impact and Global Relevance (AGE 16-18)", facilitator: "Alhaji Ibrahim Salami", date: "24th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "My Brain, My Superpower: Understanding How I Learn Best (AGE 9-12)", facilitator: "Joy Deborah Essien", date: "25th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Learning Styles, Strengths & Hidden Talent (AGE 13-15)", facilitator: "(Mrs) Oludipe Sadat Sade", date: "25th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Human Skills in an AI World: What Will Make Me Irreplaceable? (AGE 16-18)", facilitator: "Latifah Ajetunmobi", date: "25th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Spot a Problem, Create a Solution (AGE 9-12)", facilitator: "Odunayo Adegbaju (Super O)", date: "26th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Think Like a Creator, Not Just a Consumer (AGE 13-15)", facilitator: "Zainab ADEROUNMU A. W.", date: "26th August 2026", time: "4:30 PM - 5:30 PM" },
-  { topic: "Building the Future with AI, Innovation and Entrepreneurship (AGE 16-18)", facilitator: "Adejoke Haastrup", date: "26th August 2026", time: "4:30 PM - 5:30 PM" },
+  { topic: "Made for More: Discovering the Gifts That Make Me Unique (AGE 9-14)", facilitator: "Moneeloa Chaane", date: "24th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Designing a Life of Significance: Purpose, Impact and Global Relevance (AGE 16-18)", facilitator: "Alhaji Ibrahim Salami", date: "24th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "My Brain, My Superpower: Understanding How I Learn Best (AGE 9-12)", facilitator: "Joy Deborah Essien", date: "25th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Learning Styles, Strengths & Hidden Talent (AGE 13-15)", facilitator: "(Mrs) Oludipe Sadat Sade", date: "25th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Human Skills in an AI World: What Will Make Me Irreplaceable? (AGE 16-18)", facilitator: "Latifah Ajetunmobi", date: "25th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Spot a Problem, Create a Solution (AGE 9-12)", facilitator: "Odunayo Adegbaju (Super O)", date: "26th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Think Like a Creator, Not Just a Consumer (AGE 13-15)", facilitator: "Zainab ADEROUNMU A. W.", date: "26th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
+  { topic: "Building the Future with AI, Innovation and Entrepreneurship (AGE 16-18)", facilitator: "Adejoke Haastrup", date: "26th August 2026", time: "4:30 PM - 5:30 PM", youtubeUrl: "" },
 ];
 
 export const virtualParentSchedule = [
-  { topic: "Beyond Report Cards: Raising Children for Character, Purpose, and Contribution (Keynote)", facilitator: "Dr. Mrs. Olajobi", date: "24th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "How to Help Your Child Discover Their Strengths, Interests and Purpose (Workshop)", facilitator: "Abies Sonia Ebenezer-Bamigbayan", date: "24th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "Every Brain Learns Differently: Understanding Neurodiversity in Today's World (Keynote)", facilitator: "Mrs. Nne Oramasionwu", date: "25th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "How to Tell the Difference Between Defiance, Delay and Learning Difference (Workshop)", facilitator: "Doyinsola Jawando-Adebomehin", date: "25th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "The Future-Proof Child: Raising Curious, Adaptable and Resilient Learners (Keynote)", facilitator: "Dr. Sulaimon Olagoke Ogunmuyiwa", date: "26th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "The ethics of disruption: How to raise creators for positive impact (Workshop)", facilitator: "Coach Mutiat Olasumbo Olagoke", date: "26th August 2026", time: "7:30 PM - 9:30 PM" },
-  { topic: "Virtual Village: Combined Session with Teens", facilitator: "Combined Session with Teens", date: "27th August 2026", time: "7:30 PM - 9:30 PM" },
+  { topic: "Beyond Report Cards: Raising Children for Character, Purpose, and Contribution (Keynote)", facilitator: "Dr. Mrs. Olajobi", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "How to Help Your Child Discover Their Strengths, Interests and Purpose (Workshop)", facilitator: "Abies Sonia Ebenezer-Bamigbayan", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "Every Brain Learns Differently: Understanding Neurodiversity in Today's World (Keynote)", facilitator: "Mrs. Nne Oramasionwu", date: "25th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "How to Tell the Difference Between Defiance, Delay and Learning Difference (Workshop)", facilitator: "Doyinsola Jawando-Adebomehin", date: "25th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "The Future-Proof Child: Raising Curious, Adaptable and Resilient Learners (Keynote)", facilitator: "Dr. Sulaimon Olagoke Ogunmuyiwa", date: "26th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "The ethics of disruption: How to raise creators for positive impact (Workshop)", facilitator: "Coach Mutiat Olasumbo Olagoke", date: "26th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "Virtual Village: Combined Session with Teens", facilitator: "Combined Session with Teens", date: "27th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
 ];
 
 export const physicalSchedule = [
@@ -523,27 +558,35 @@ export const virtualParentMatrix = {
           topic: "Beyond Report Cards: Raising Children for Character, Purpose, and Contribution",
           speaker: "(Dr (Mrs) Olajobi)",
           speakerId: "dr-mrs-olajobi",
-          time: "7:30 PM - 9:30 PM"
+          date: "24th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: "https://www.youtube.com/live/R_O8EizLkrw?si=abu0CmuhWSRQok3X"
         },
         {
           topic: "Every Brain Learns Differently: Understanding Neurodiversity in Today's World",
           speaker: "Brain Ability",
           speakerId: "nne-oramasionwu",
-          time: "7:30 PM - 9:30 PM"
+          date: "25th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "The Future-Proof Child: Raising Curious, Adaptable and Resilient Learners",
           speaker: "Dr Sulaiman Ogunmuyiwa",
           speakerId: "dr-sulaimon-olagoke-ogunmuyiwa",
-          time: "7:30 PM - 9:30 PM"
+          date: "26th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "Virtual Village: Combined Session with Teens",
           speaker: "Combined Session",
           speakerId: null,
+          date: "27th August 2026",
           time: "7:30 PM - 9:30 PM",
           rowSpan: 2,
-          isCombined: true
+          isCombined: true,
+          youtubeUrl: ""
         }
       ]
     },
@@ -555,19 +598,25 @@ export const virtualParentMatrix = {
           topic: "How to Help Your Child Discover Their Strengths, Interests and Purpose",
           speaker: "CoachAbies Sonia",
           speakerId: "abies-sonia",
-          time: "7:30 PM - 9:30 PM"
+          date: "24th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: "https://www.youtube.com/live/R_O8EizLkrw?si=abu0CmuhWSRQok3X"
         },
         {
           topic: "How to Tell the Difference Between Defiance, Delay and Learning Difference",
           speaker: "Mrs Adebomehin (Jawando)",
           speakerId: "doyinsola-jawando-adebomehin",
-          time: "7:30 PM - 9:30 PM"
+          date: "25th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "The ethics of disruption: How to raise creators for positive impact",
           speaker: "Mutiat Olagoke",
           speakerId: "coach-mutiat-olasumbo-olagoke",
-          time: "7:30 PM - 9:30 PM"
+          date: "26th August 2026",
+          time: "7:30 PM - 9:30 PM",
+          youtubeUrl: ""
         }
         // Day 4 is covered by rowSpan from Keynote Address
       ]
@@ -591,21 +640,27 @@ export const virtualTeenMatrix = {
           topic: "Made for More: Discovering the Gifts That Make Me Unique-9-14",
           speaker: "(Monee Channe)",
           speakerId: "moneeloa-chaane",
+          date: "24th August 2026",
           time: "4:30 PM - 5:30 PM",
           rowSpan: 2,
-          mergedLabel: "AGE 9-14"
+          mergedLabel: "AGE 9-14",
+          youtubeUrl: ""
         },
         {
           topic: "My Brain, My Superpower: Understanding How I Learn Best",
           speaker: "Coach Joy Essien",
           speakerId: "joy-deborah-essien",
-          time: "4:30 PM - 5:30 PM"
+          date: "25th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "Spot a Problem, Create a Solution",
           speaker: "Odunayo Adegbaju",
           speakerId: "odunayo-adegbaju",
-          time: "4:30 PM - 5:30 PM"
+          date: "26th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         }
       ]
     },
@@ -618,7 +673,9 @@ export const virtualTeenMatrix = {
           topic: "Learning Styles, Strengths & Hidden Talent",
           speaker: "Ms Sade Oludipe",
           speakerId: "oludipe-sadat-sade",
-          time: "4:30 PM - 5:30 PM"
+          date: "25th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "Think Like a Creator, Not Just a Consumer",
@@ -626,7 +683,9 @@ export const virtualTeenMatrix = {
           speakers: [
             { name: "Zainab Aderohunmu", speakerId: "zainab-aderounmu" }
           ],
-          time: "4:30 PM - 5:30 PM"
+          date: "26th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         }
       ]
     },
@@ -638,19 +697,25 @@ export const virtualTeenMatrix = {
           topic: "Designing a Life of Significance: Purpose, Impact and Global Relevance",
           speaker: "Ibrahim Salami",
           speakerId: "alhaji-ibrahim-salami",
-          time: "4:30 PM - 5:30 PM"
+          date: "24th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "Human Skills in an AI World: What Will Make Me Irreplaceable?",
           speaker: "Latifat Ajet",
           speakerId: "latifah-ajetunmobi",
-          time: "4:30 PM - 5:30 PM"
+          date: "25th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         },
         {
           topic: "Building the Future with AI, Innovation and Entrepreneurship",
           speaker: "Kids that Code Founder",
           speakerId: "joke-haastrup",
-          time: "4:30 PM - 5:30 PM"
+          date: "26th August 2026",
+          time: "4:30 PM - 5:30 PM",
+          youtubeUrl: ""
         }
       ]
     }
