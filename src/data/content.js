@@ -45,8 +45,8 @@ export const virtualTeenSchedule = [
 ];
 
 export const virtualParentSchedule = [
-  { topic: "Beyond Report Cards: Raising Children for Character, Purpose, and Contribution (Keynote)", facilitator: "Dr. Mrs. Olajobi", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
-  { topic: "How to Help Your Child Discover Their Strengths, Interests and Purpose (Workshop)", facilitator: "Abies Sonia Ebenezer-Bamigbayan", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
+  { topic: "Beyond Report Cards: Raising Children for Character, Purpose, and Contribution (Keynote)", facilitator: "Dr. Mrs. Olajobi", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "https://www.youtube.com/live/R_O8EizLkrw?si=abu0CmuhWSRQok3X" },
+  { topic: "How to Help Your Child Discover Their Strengths, Interests and Purpose (Workshop)", facilitator: "Abies Sonia Ebenezer-Bamigbayan", date: "24th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "https://www.youtube.com/live/R_O8EizLkrw?si=abu0CmuhWSRQok3X" },
   { topic: "Every Brain Learns Differently: Understanding Neurodiversity in Today's World (Keynote)", facilitator: "Mrs. Nne Oramasionwu", date: "25th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
   { topic: "How to Tell the Difference Between Defiance, Delay and Learning Difference (Workshop)", facilitator: "Doyinsola Jawando-Adebomehin", date: "25th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
   { topic: "The Future-Proof Child: Raising Curious, Adaptable and Resilient Learners (Keynote)", facilitator: "Dr. Sulaimon Olagoke Ogunmuyiwa", date: "26th August 2026", time: "7:30 PM - 9:30 PM", youtubeUrl: "" },
