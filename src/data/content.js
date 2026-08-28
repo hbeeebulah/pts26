@@ -55,12 +55,22 @@ export const virtualParentSchedule = [
 ];
 
 export const physicalSchedule = [
-  { topic: "Digital Kinship: How Hyperconnectivity Can Build (or Break) the Parenting Village", facilitator: "Modupe Ehirim", date: "29th August 2026", time: "9:00 AM - 10:00 AM" },
-  { topic: "Who's Helping You Raise Your Child: Why Community Still Matters in a Tech-Driven Age", facilitator: "Mrs. Rizqah Lasaki", date: "29th August 2026", time: "10:30 AM - 11:30 AM" },
-  { topic: "Feel Seen, Stay Safe: Building Emotional and Digital Safe Spaces", facilitator: "Odunayo Adegbaju", date: "29th August 2026", time: "12:00 PM - 1:00 PM" },
-  { topic: "I'm More Than My Feed: Finding Identity in a World That Keeps Scrolling", facilitator: "Bolanle Ajijola", date: "29th August 2026", time: "2:00 PM - 3:00 PM" },
-  { topic: "Whose Voice Matters? Power, Pressure, and Presence in Parenting and Teaching Today's Teen (Panel Discussion)", facilitator: "Nurudeen Ibrahim, Adeola KJ, Ifechukwu, AbduLlah Mumuni, Mrs Gbemisola Ejiwunmi, Fareedah Bombata (Teen 1) and Nwachukwu (Teen 2)", date: "29th August 2026", time: "3:30 PM - 4:30 PM" },
-  { topic: "Closing Panel Discussion", facilitator: "All Facilitators", date: "29th August 2026", time: "5:00 PM - 6:00 PM" },
+  { topic: "Doors Open + Breakfast Network", duration: "30 mins", date: "29th August 2026", time: "9:30 AM - 10:00 AM", facilitator: "Hospitality & Registration Team" },
+  { topic: "🇳🇬 National Anthem", duration: "5 mins", date: "29th August 2026", time: "10:00 AM - 10:05 AM", facilitator: "Opening Protocol" },
+  { topic: "Introduction of Special Guests & Dignitaries", duration: "10 mins", date: "29th August 2026", time: "10:05 AM - 10:15 AM", facilitator: "Master of Ceremonies" },
+  { topic: "Chairman's Opening Speech", duration: "10 mins", date: "29th August 2026", time: "10:15 AM - 10:25 AM", facilitator: "Alhaji Abdulhafiz Gbolahan Toriola (Chairman, PTS 2026)" },
+  { topic: "🎤 KEYNOTE: The World Our Children Should Will Reinvent: Why Courage, Curiosity and Creativity Matter More Than Ever", duration: "45 mins", date: "29th August 2026", time: "10:25 AM - 11:10 AM", facilitator: "Keynote Speaker" },
+  { topic: "Keynote Reflection / Audience Engagement & Transition", duration: "15 mins", date: "29th August 2026", time: "11:10 AM - 11:25 AM", facilitator: "Audience & Session Leads" },
+  { topic: "🎙️ ADULT PANEL: The Opportunity Gap — Connecting Education, Employability and Purpose", duration: "50 mins", date: "29th August 2026", time: "11:25 AM - 12:15 PM", facilitator: "Adult Panelists & Guest Speakers" },
+  { topic: "Voice of Partnerships: Debbo Africa", duration: "10 mins", date: "29th August 2026", time: "12:15 PM - 12:25 PM", facilitator: "Debbo Africa Representatives" },
+  { topic: "✨ Starlight Round: Say It Without Getting Grounded", duration: "10 mins", date: "29th August 2026", time: "12:25 PM - 12:35 PM", facilitator: "Interactive Session Facilitator" },
+  { topic: "🎙️ TEEN PANEL: Dear Adults, We're Trying — The Fears, Pressures and Possibilities Behind Today's Teenage Experience", duration: "55 mins", date: "29th August 2026", time: "12:35 PM - 1:50 PM", facilitator: "Teen Speakers & Advocates" },
+  { topic: "Audience Reflection / Intergenerational Response", duration: "15 mins", date: "29th August 2026", time: "1:50 PM - 2:00 PM", facilitator: "Audience & Panelists" },
+  { topic: "Voice of Partnerships: Lotus Bank", duration: "10 mins", date: "29th August 2026", time: "2:00 PM - 2:10 PM", facilitator: "Lotus Bank Representatives" },
+  { topic: "🏆 GLOBAL IMPACT HONOURS", duration: "35 mins", date: "29th August 2026", time: "2:05 PM - 2:40 PM", facilitator: "PTS Awards Committee" },
+  { topic: "Goodwill Messages / Partner & Sponsor Recognition", duration: "30 mins", date: "29th August 2026", time: "2:40 PM - 3:10 PM", facilitator: "Partners & Sponsors" },
+  { topic: "Convener's Thank You & PTS 2026 Charge", duration: "15 mins", date: "29th August 2026", time: "3:10 PM - 3:25 PM", facilitator: "Aameenah Oluwatosin Yunus-Ali (Convener)" },
+  { topic: "🤝 Networking, Exhibition, Clinics & Family Engagement", duration: "35 mins", date: "29th August 2026", time: "3:25 PM - 4:00 PM", facilitator: "All Participants & Exhibitors" },
 ];
 
 export const speakers = [
@@ -149,6 +159,77 @@ export const speakers = [
     hasBio: false
   },
   {
+    id: "alhaji-abdulhafiz-gbolahan-toriola",
+    name: "Alhaji Abdulhafiz Gbolahan Toriola",
+    role: "Chairman, PTS 2026",
+    title: "Chairman, PTS 2026",
+    img: "/speakers/Alhaji Abdulhafiz Gbolahan Toriola.jpeg",
+    hasBio: false
+  },
+  {
+    id: "abdullah",
+    name: "Abdullah",
+    role: "PTS 2026 Youth Facilitator",
+    img: "/speakers/Abdullah.jpeg",
+    hasBio: false
+  },
+  {
+    id: "adigwe-chidumebi",
+    name: "Adigwe Chidumebi",
+    role: "PTS 2026 Facilitator",
+    img: "/speakers/Adigwe Chidumebi.jpeg",
+    hasBio: false
+  },
+  {
+    id: "fareedah-bombata",
+    name: "Fareedah Bombata",
+    role: "Teen Speaker & Youth Advocate",
+    img: "/speakers/Fareedah Bombata.jpg",
+    hasBio: false
+  },
+  {
+    id: "dr-ebunlomo-fawole",
+    name: "Dr. Ebunlomo Fawole",
+    role: "PTS 2026 Facilitator",
+    img: "/speakers/Dr. Ebunlomo Fawole.jpeg",
+    hasBio: false
+  },
+  {
+    id: "esther-nwachukwu",
+    name: "Esther Nwachukwu",
+    role: "PTS 2026 Youth Speaker",
+    img: "/speakers/Esther Nwachukwu.jpeg",
+    hasBio: false
+  },
+  {
+    id: "haneehah-gbadegesin",
+    name: "Haneehah Gbadegesin",
+    role: "PTS 2026 Speaker",
+    img: "/speakers/Haneehah Gbadegesin.png",
+    hasBio: false
+  },
+  {
+    id: "kolawole-osinowo",
+    name: "Kolawole Osinowo",
+    role: "PTS 2026 Facilitator",
+    img: "/speakers/Kolawole Osinowo.jpeg",
+    hasBio: false
+  },
+  {
+    id: "olaleye-abdulrahman",
+    name: "Olaleye AbdulRahman",
+    role: "PTS 2026 Youth Facilitator",
+    img: "/speakers/Olaleye AbdulRahman.jpeg",
+    hasBio: false
+  },
+  {
+    id: "sheriffdeen-olanrewaju-hassan",
+    name: "Sheriffdeen Olanrewaju Hassan",
+    role: "PTS 2026 Facilitator",
+    img: "/speakers/Sheriffdeen Olanrewaju Hassan.jpeg",
+    hasBio: false
+  },
+  {
     id: "joke-haastrup",
     name: "Adejoke Haastrup",
     role: "Software Engineer & Tech Education Leader",
@@ -223,7 +304,6 @@ export const speakers = [
     img: "/speakers/Zainab Aderounmu.jpg",
     hasBio: true,
     bio: "Zainab ADEROUNMU A. W. is a Communications Expert, Corporate Master of Ceremonies, and Broadcast Journalist. She has a background in English Language and Literature with a First Class grade, finishing as the overall Best Graduating Student. As a gender and climate advocate, she believes women's economic empowerment translates into global economic growth. So she works at the intersection of gender equality and climate change. She works with the European Union Delegation as a Youth Advisor and Ambassador, specifically as the Spokesperson and Head of Communications and PR for the European Union Youth Sounding Board.",
-    highlights: ["Communications Expert & Corporate MC", "Broadcast Journalist", "EU Youth Advisor & Ambassador", "Spokesperson & Head of Comms, EU Youth Sounding Board", "First Class Overall Best Graduating Student"]
   }
 ];
 

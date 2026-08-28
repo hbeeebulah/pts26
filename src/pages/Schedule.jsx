@@ -122,6 +122,12 @@ export default function Schedule() {
               >
                 Virtual Summit (Teens)
               </button>
+              <button 
+                className={`matrix-tab-btn ${matrixTab === 'physical' ? 'active' : ''}`}
+                onClick={() => setMatrixTab('physical')}
+              >
+                In-Person Summit (Aug 29)
+              </button>
             </div>
 
             <p className="grid-scroll-hint">
@@ -360,6 +366,62 @@ export default function Schedule() {
                 </div>
               )}
 
+              {/* ================= IN-PERSON SUMMIT PROGRAM TABLE ================= */}
+              {(matrixTab === 'all' || matrixTab === 'physical') && (
+                <div className="matrix-table-card glass-card">
+                  <div className="matrix-table-header physical-theme">
+                    <h3>IN-PERSON SUMMIT PROGRAMME</h3>
+                    <span className="matrix-subtitle-badge physical">Main Event • Aug 29, 2026</span>
+                  </div>
+
+                  <div className="table-responsive-wrapper">
+                    <table className="schedule-spreadsheet-table physical-table">
+                      <thead>
+                        <tr>
+                          <th style={{ width: '140px' }}>Time</th>
+                          <th style={{ width: '90px' }}>Duration</th>
+                          <th>Programme / Session</th>
+                          <th>Facilitator / Lead</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {physicalSchedule.map((item, pIdx) => {
+                          const matchedSpeaker = speakers.find(s => 
+                            s.name.toLowerCase().includes(item.facilitator.toLowerCase()) || 
+                            (item.facilitator.toLowerCase().includes(s.name.toLowerCase()))
+                          );
+
+                          return (
+                            <tr key={pIdx}>
+                              <td className="time-cell">
+                                <strong style={{ color: 'var(--accent-1)' }}>{item.time}</strong>
+                              </td>
+                              <td className="duration-cell">
+                                <span className="duration-pill">{item.duration}</span>
+                              </td>
+                              <td className="topic-cell">
+                                <span style={{ fontWeight: 600, color: '#fff' }}>{item.topic}</span>
+                              </td>
+                              <td className="facilitator-cell">
+                                {matchedSpeaker ? (
+                                  <Link to={`/speakers/${matchedSpeaker.id}`} className="facilitator-link">
+                                    {matchedSpeaker.img && <img src={matchedSpeaker.img} alt={matchedSpeaker.name} className="mini-avatar" />}
+                                    <span>{item.facilitator}</span>
+                                    <ExternalLink size={12} />
+                                  </Link>
+                                ) : (
+                                  <span className="facilitator-text" style={{ color: 'var(--text-secondary)' }}>{item.facilitator}</span>
+                                )}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
         )}
@@ -458,22 +520,38 @@ export default function Schedule() {
                 );
               })}
 
-              {listTab === 'physical' && physicalSchedule.map((item, i) => (
-                <div className="schedule-item glass-card" key={i}>
-                  <div className="schedule-main">
-                    <span className="schedule-track-badge physical">Physical Summit</span>
-                    <h3 className="schedule-topic">{item.topic}</h3>
-                    <div className="schedule-facilitator-row">
-                      <span className="facilitator-label">Facilitator(s):</span>
-                      <span className="facilitator-text">{item.facilitator}</span>
+              {listTab === 'physical' && physicalSchedule.map((item, i) => {
+                const matchedSpeaker = speakers.find(s => 
+                  s.name.toLowerCase().includes(item.facilitator.toLowerCase()) || 
+                  (item.facilitator.toLowerCase().includes(s.name.toLowerCase()))
+                );
+
+                return (
+                  <div className="schedule-item glass-card" key={i}>
+                    <div className="schedule-main">
+                      <span className="schedule-track-badge physical">In-Person Summit</span>
+                      <h3 className="schedule-topic">{item.topic}</h3>
+                      <div className="schedule-facilitator-row">
+                        <span className="facilitator-label">Facilitator / Lead:</span>
+                        {matchedSpeaker ? (
+                          <Link to={`/speakers/${matchedSpeaker.id}`} className="facilitator-link">
+                            {matchedSpeaker.img && <img src={matchedSpeaker.img} alt={matchedSpeaker.name} className="mini-avatar" />}
+                            <span>{item.facilitator}</span>
+                            <ExternalLink size={14} />
+                          </Link>
+                        ) : (
+                          <span className="facilitator-text">{item.facilitator}</span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="schedule-meta">
+                      <div className="schedule-date">📅 {item.date}</div>
+                      <div className="schedule-time">⏰ {item.time}</div>
+                      {item.duration && <div className="schedule-duration" style={{ fontSize: '0.85rem', color: '#38bdf8', marginTop: 4, fontWeight: 600 }}>⏱️ {item.duration}</div>}
                     </div>
                   </div>
-                  <div className="schedule-meta">
-                    <div className="schedule-date">📅 {item.date}</div>
-                    <div className="schedule-time">⏰ {item.time}</div>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
