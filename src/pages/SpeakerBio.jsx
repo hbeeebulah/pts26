@@ -31,8 +31,9 @@ export default function SpeakerBio() {
     );
   }
 
-  // Check if speaker has session in schedules
-  const allSessions = [...virtualTeenSchedule, ...virtualParentSchedule, ...physicalSchedule];
+  // Check if speaker has session in schedules (Virtual schedules commented out)
+  // const allSessions = [...virtualTeenSchedule, ...virtualParentSchedule, ...physicalSchedule];
+  const allSessions = [...physicalSchedule];
   const speakerSessions = allSessions.filter((session) =>
     session.facilitator.toLowerCase().includes(speaker.name.toLowerCase()) ||
     (speaker.title && session.facilitator.toLowerCase().includes(speaker.title.toLowerCase()))

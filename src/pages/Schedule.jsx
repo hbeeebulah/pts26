@@ -14,8 +14,8 @@ import {
 export default function Schedule() {
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
-  const [listTab, setListTab] = useState('parent'); // 'parent', 'teen', 'physical'
-  const [matrixTab, setMatrixTab] = useState('all'); // 'all', 'parent', 'teen'
+  const [listTab, setListTab] = useState('physical'); // 'parent', 'teen', 'physical' - defaulted to physical
+  const [matrixTab, setMatrixTab] = useState('physical'); // 'all', 'parent', 'teen', 'physical' - defaulted to physical
 
   // Helper to find speaker data by ID
   const getSpeaker = (speakerId) => {
@@ -74,7 +74,7 @@ export default function Schedule() {
           <h1 className="section-title">Summit Schedule</h1>
           <div className="divider"></div>
           <p className="section-subtitle">
-            Explore our virtual keynotes, workshops, and age-tailored tracks. 
+            Explore our keynotes, workshops, and age-tailored tracks. 
             <strong style={{ color: 'var(--accent-1)', display: 'inline-flex', alignItems: 'center', gap: 4, marginLeft: 6 }}>
               Click any speaker's name to view their bio page!
             </strong>
@@ -104,6 +104,7 @@ export default function Schedule() {
           <div className="matrix-schedule-container">
             {/* Matrix Filter Selector */}
             <div className="matrix-tab-bar">
+              {/* Virtual Parent & Teen matrix tabs commented out:
               <button 
                 className={`matrix-tab-btn ${matrixTab === 'all' ? 'active' : ''}`}
                 onClick={() => setMatrixTab('all')}
@@ -122,6 +123,7 @@ export default function Schedule() {
               >
                 Virtual Summit (Teens)
               </button>
+              */}
               <button 
                 className={`matrix-tab-btn ${matrixTab === 'physical' ? 'active' : ''}`}
                 onClick={() => setMatrixTab('physical')}
@@ -136,7 +138,8 @@ export default function Schedule() {
 
             <div className={`matrix-tables-grid ${matrixTab !== 'all' ? 'single-table' : ''}`}>
               
-              {/* ================= PARENTS MATRIX TABLE ================= */}
+              {/* ================= PARENTS MATRIX TABLE (VIRTUAL SCHEDULE COMMENTED OUT) ================= */}
+              {/* 
               {(matrixTab === 'all' || matrixTab === 'parent') && (
                 <div className="matrix-table-card glass-card">
                   <div className="matrix-table-header parents-theme">
@@ -147,7 +150,6 @@ export default function Schedule() {
                   <div className="table-responsive-wrapper">
                     <table className="schedule-spreadsheet-table parents-table">
                       <thead>
-                        {/* Sub-Themes Row */}
                         <tr className="subtheme-header-row">
                           <th className="subtheme-corner-header">SUB-THEMES</th>
                           {virtualParentMatrix.days.map((d, idx) => (
@@ -157,7 +159,6 @@ export default function Schedule() {
                             </th>
                           ))}
                         </tr>
-                        {/* Day Row */}
                         <tr className="days-label-row">
                           <th className="corner-label-cell">Day Breakdown</th>
                           {virtualParentMatrix.days.map((d, idx) => (
@@ -188,7 +189,6 @@ export default function Schedule() {
                                       {cell.topic}
                                     </div>
 
-                                    {/* Speaker Link */}
                                     {cell.speakerId ? (
                                       <button 
                                         className="speaker-bio-link-btn"
@@ -213,7 +213,6 @@ export default function Schedule() {
                                       </div>
                                     )}
 
-                                    {/* Rewatch Session Button / Status */}
                                     {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                   </div>
                                 </td>
@@ -226,8 +225,10 @@ export default function Schedule() {
                   </div>
                 </div>
               )}
+              */}
 
-              {/* ================= TEENS MATRIX TABLE ================= */}
+              {/* ================= TEENS MATRIX TABLE (VIRTUAL SCHEDULE COMMENTED OUT) ================= */}
+              {/* 
               {(matrixTab === 'all' || matrixTab === 'teen') && (
                 <div className="matrix-table-card glass-card">
                   <div className="matrix-table-header teens-theme">
@@ -238,7 +239,6 @@ export default function Schedule() {
                   <div className="table-responsive-wrapper">
                     <table className="schedule-spreadsheet-table teens-table">
                       <thead>
-                        {/* Sub-Themes Row */}
                         <tr className="subtheme-header-row teens-header">
                           <th className="subtheme-corner-header">SUB-THEMES</th>
                           {virtualTeenMatrix.days.map((d, idx) => (
@@ -248,7 +248,6 @@ export default function Schedule() {
                             </th>
                           ))}
                         </tr>
-                        {/* Day Row */}
                         <tr className="days-label-row">
                           <th className="corner-label-cell">Age Group</th>
                           {virtualTeenMatrix.days.map((d, idx) => (
@@ -266,7 +265,6 @@ export default function Schedule() {
                             {row.cells.map((cell, cIdx) => {
                               const sessionDate = cell.date || virtualTeenMatrix.days[cIdx]?.date;
 
-                              // If cell contains multiple speakers (e.g. Zahra Ajet/Zainab Aderohunmu)
                               if (cell.speakers) {
                                 return (
                                   <td 
@@ -304,7 +302,6 @@ export default function Schedule() {
                                         </div>
                                       )}
 
-                                      {/* Rewatch Session Button / Status */}
                                       {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                     </div>
                                   </td>
@@ -352,7 +349,6 @@ export default function Schedule() {
                                       </div>
                                     )}
 
-                                    {/* Rewatch Session Button / Status */}
                                     {renderRewatchButton(sessionDate, cell.time, cell.youtubeUrl, cell.isPast, false)}
                                   </div>
                                 </td>
@@ -365,6 +361,7 @@ export default function Schedule() {
                   </div>
                 </div>
               )}
+              */}
 
               {/* ================= IN-PERSON SUMMIT PROGRAM TABLE ================= */}
               {(matrixTab === 'all' || matrixTab === 'physical') && (
@@ -430,6 +427,7 @@ export default function Schedule() {
         {viewMode === 'list' && (
           <div className="timeline-schedule-container">
             <div className="schedule-tabs">
+              {/* Virtual schedule timeline tabs commented out:
               <button 
                 className={`schedule-tab ${listTab === 'parent' ? 'active' : ''}`}
                 onClick={() => setListTab('parent')}
@@ -442,6 +440,7 @@ export default function Schedule() {
               >
                 Virtual Teens (Aug 24-26)
               </button>
+              */}
               <button 
                 className={`schedule-tab ${listTab === 'physical' ? 'active' : ''}`}
                 onClick={() => setListTab('physical')}
@@ -451,8 +450,8 @@ export default function Schedule() {
             </div>
 
             <div className="schedule-list">
+              {/* Virtual Parents timeline schedule commented out:
               {listTab === 'parent' && virtualParentSchedule.map((item, i) => {
-                // Find matching speaker in data
                 const matchedSpeaker = speakers.find(s => 
                   s.name.toLowerCase().includes(item.facilitator.toLowerCase()) || 
                   (item.facilitator.toLowerCase().includes(s.name.toLowerCase()))
@@ -479,13 +478,14 @@ export default function Schedule() {
                     <div className="schedule-meta">
                       <div className="schedule-date">📅 {item.date}</div>
                       <div className="schedule-time">⏰ {item.time}</div>
-                      {/* Rewatch Session Button / Status */}
                       {renderRewatchButton(item.date, item.time, item.youtubeUrl, item.isPast, true)}
                     </div>
                   </div>
                 );
               })}
+              */}
 
+              {/* Virtual Teens timeline schedule commented out:
               {listTab === 'teen' && virtualTeenSchedule.map((item, i) => {
                 const matchedSpeaker = speakers.find(s => 
                   s.name.toLowerCase().includes(item.facilitator.toLowerCase()) || 
@@ -513,12 +513,12 @@ export default function Schedule() {
                     <div className="schedule-meta">
                       <div className="schedule-date">📅 {item.date}</div>
                       <div className="schedule-time">⏰ {item.time}</div>
-                      {/* Rewatch Session Button / Status */}
                       {renderRewatchButton(item.date, item.time, item.youtubeUrl, item.isPast, true)}
                     </div>
                   </div>
                 );
               })}
+              */}
 
               {listTab === 'physical' && physicalSchedule.map((item, i) => {
                 const matchedSpeaker = speakers.find(s => 
